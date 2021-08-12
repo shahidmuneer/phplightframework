@@ -7,6 +7,12 @@ class Controller{
     }
 
     public function index(){
+        $db=new Db();
+        $db->insert("shahid",[
+            "education"=>"Nothing",
+            "study"=>"Current",
+            "name"=>"shahid"
+        ]);
         $user=new Users();
         $users=$user->getUser();
         $this->loadView("home",$users);

@@ -29,10 +29,12 @@ spl_autoload_register(function ($class) {
     
     if(file_exists(baseurl.'/App/Controllers/' . $class . '.php')){
         require baseurl.'/App/Controllers/' . $class . '.php';
-
     }
     elseif(file_exists(baseurl.'/App/Models/' . $class . '.php')){
         require baseurl.'/App/Models/' . $class . '.php';
+    }
+    elseif(file_exists(baseurl.'/App/Utils/' . $class . '.php')){
+        require baseurl.'/App/Utils/' . $class . '.php';
     }
 });
 
